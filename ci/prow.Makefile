@@ -13,7 +13,7 @@ patch:
 	for i in ./patches/*.patch; do patch -p0 < $$i; done
 
 build:
-	$(MAKE) -f Makefile build/operator-sdk build/helm-operator build-darwin
+	$(MAKE) -f Makefile build/helm-operator
 
 test-e2e-go: patch
 	./ci/tests/e2e-go.sh $(ARGS)
